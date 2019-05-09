@@ -15,6 +15,9 @@ class CrearTablaDatos extends Migration
     {
         Schema::create('datos', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('cedula', 15)->unique();
+            $table->string('nombre', 50);
+            $table->string('apellido', 50);
             $table->timestamps();
         });
     }
